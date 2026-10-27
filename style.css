@@ -1,0 +1,41 @@
+:root{--bg:#eef2f6;--card:#fff;--ink:#14213d;--muted:#6b7a90;--brand:#0b3d91;--up:#12a150;--down:#d93a3a;--line:#e3e9f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Be Vietnam Pro","Segoe UI",system-ui,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px clamp(16px,4vw,40px);background:var(--brand);color:#fff;position:sticky;top:0;z-index:5}
+.top h1{margin:0;font-size:18px;font-weight:600}
+#f{display:flex;gap:8px}
+#f input{width:130px;padding:8px 12px;border:0;border-radius:8px;font:inherit;text-transform:uppercase;outline:2px solid transparent;transition:outline-color .2s}
+#f input:focus-visible{outline-color:#9cc2ff}
+button{font:inherit;cursor:pointer;transition:background .2s,color .2s,transform .15s}
+#f button{padding:8px 18px;border:0;border-radius:8px;background:#ffb703;color:#222;font-weight:600}
+#f button:hover{transform:translateY(-1px)}
+button:focus-visible{outline:2px solid #4c8dff;outline-offset:2px}
+main{max-width:1280px;margin:0 auto;padding:24px clamp(16px,4vw,40px) 48px}
+.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(20,33,61,.06);border:1px solid var(--line)}
+.hero{margin-bottom:20px}
+.id{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.badge{width:64px;height:64px;border-radius:14px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700;letter-spacing:.5px}
+.id h2{margin:0;font-size:20px}
+.muted{color:var(--muted);margin:2px 0 0;font-size:13px}
+.px{margin-left:auto;text-align:right}
+.px b{display:block;font-size:34px;line-height:1.1}
+.up{color:var(--up)}.down{color:var(--down)}
+.ranges{display:flex;gap:6px;margin:16px 0 6px}
+.ranges button,.seg button{border:1px solid var(--line);background:#fff;padding:5px 14px;border-radius:999px;color:var(--muted)}
+.ranges button:hover,.seg button:hover{background:#f3f6fa}
+.ranges .on,.seg .on{background:var(--brand);border-color:var(--brand);color:#fff}
+.ch{position:relative;height:260px}
+.ch.tall{height:340px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:16px 0 0}
+.stats div{background:#f6f9fc;border-radius:10px;padding:10px 12px}
+.stats dt{font-size:12px;color:var(--muted)}
+.stats dd{margin:2px 0 0;font-weight:600}
+.bar{display:flex;align-items:center;gap:14px;margin:0 0 14px}
+.seg{display:flex;gap:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px}
+.card h3{margin:0 0 10px;font-size:14px;color:var(--brand)}
+.note{margin-top:22px;color:var(--muted);font-size:12.5px}
+.err{color:var(--down)}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.px b{font-size:28px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}

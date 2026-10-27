@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phân tích cổ phiếu Việt Nam</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <h1>Phân tích cổ phiếu</h1>
+  <form id="f"><input id="sym" value="HPG" maxlength="10" placeholder="Mã cổ phiếu" autocomplete="off"><button>Xem</button></form>
+</header>
+
+<main>
+  <section class="hero card">
+    <div class="id">
+      <div class="badge" id="badge">HPG</div>
+      <div>
+        <h2 id="name">…</h2>
+        <p class="muted" id="sector"></p>
+      </div>
+      <div class="px"><b id="price">—</b><span id="chg"></span></div>
+    </div>
+    <div class="ranges" id="ranges">
+      <button data-d="30">1T</button><button data-d="90">3T</button><button data-d="180">6T</button>
+      <button data-d="365" class="on">1N</button><button data-d="1825">5N</button><button data-d="0">Tất cả</button>
+    </div>
+    <div class="ch tall"><canvas id="cPrice"></canvas></div>
+    <dl class="stats" id="stats"></dl>
+  </section>
+
+  <div class="bar">
+    <div class="seg" id="mode"><button data-m="QUARTER">Theo quý</button><button data-m="ANNUAL" class="on">Theo năm</button></div>
+    <span id="status" class="muted"></span>
+  </div>
+
+  <section class="grid" id="grid">
+    <article class="card"><h3>Doanh thu thuần (tỷ đồng) và tăng trưởng YoY</h3><div class="ch"><canvas id="cRev"></canvas></div></article>
+    <article class="card"><h3>LNST cổ đông công ty mẹ (tỷ đồng) và tăng trưởng YoY</h3><div class="ch"><canvas id="cNp"></canvas></div></article>
+    <article class="card"><h3>Biên lợi nhuận gộp và biên lợi nhuận ròng</h3><div class="ch"><canvas id="cMg"></canvas></div></article>
+    <article class="card"><h3>ROE và ROA (theo 4 quý gần nhất)</h3><div class="ch"><canvas id="cRo"></canvas></div></article>
+    <article class="card"><h3>Lưu chuyển tiền tệ (tỷ đồng)</h3><div class="ch"><canvas id="cCf"></canvas></div></article>
+    <article class="card"><h3>Hàng tồn kho (tỷ đồng) và vòng quay (lần)</h3><div class="ch"><canvas id="cInv"></canvas></div></article>
+    <article class="card"><h3 id="tPE">Định giá P/E</h3><div class="ch"><canvas id="cPE"></canvas></div></article>
+    <article class="card"><h3 id="tPB">Định giá P/B</h3><div class="ch"><canvas id="cPB"></canvas></div></article>
+    <article class="card"><h3 id="tPS">Định giá P/S</h3><div class="ch"><canvas id="cPS"></canvas></div></article>
+  </section>
+
+  <p class="note" id="note"></p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
